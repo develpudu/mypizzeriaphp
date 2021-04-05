@@ -16,9 +16,9 @@
             echo '<title>' . $array['INFO']['name'] . '</title>';
 
     $lang = ($array['LANG']['language']);
-    if ($lang != "EN" && $lang != "IT") {
-        $lang = "EN";
-    }
+    // if ($lang != "EN" && $lang != "IT") {
+    //     $lang = "EN";
+    // }
 
     $inilang = file_get_contents("./resources/translations.ini", true);
     $arraylang = parse_ini_string($inilang, true);
@@ -457,7 +457,7 @@
             </button>
             <?php
             if (isset($_COOKIE['logged-id'])) {
-                echo '<a class="btn btn-link text-danger text-decoration-none" href="../php/logout.inc.php" style="padding-left: 12; padding-right: 12;"><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;Logout</a>';
+                echo '<a class="btn btn-link text-danger text-decoration-none" href="../php/logout.inc.php" style="padding-left: 12; padding-right: 12;"><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;' . $arraylang[$lang]['logout'] . '</a>';
             }
             ?>
         </div>

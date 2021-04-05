@@ -13,9 +13,9 @@ $conn = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
                         echo '<link rel="icon" href="' . $array['CONFIG']['site'] . 'resources/phpmypizza.ico" type="image/x-icon">';
                         echo '<title>' . $array['INFO']['name'] . '</title>';
 $lang = ($array['LANG']['language']);
-if ($lang != "EN" && $lang != "IT") {
-    $lang = "EN";
-}
+// if ($lang != "EN" && $lang != "IT") {
+//     $lang = "EN";
+// }
 $inilang = file_get_contents("./resources/translations.ini", true);
 $arraylang = parse_ini_string($inilang, true);
 //var_dump($arraylang);
@@ -63,9 +63,9 @@ $theme = theme($array['LOOKNFEEL']['theme']);
                                             }
                                             ?>
                                         </select>
-                                        <div class="input-group-append align-self-center">
+                                        <!-- <div class="input-group-append align-self-center">
                                             <a class="btn btn-outline-<?php echo $theme ?>" href="/menu" role="button" style="padding: 15;"><i class="fas fa-book-open"></i></a>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </label>
                             </div>
