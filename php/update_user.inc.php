@@ -10,28 +10,28 @@
             if($rowcheck['level'] === $_POST['level']) {
                 $sql .= "";
             } else {
-                $sql .= "UPDATE `my_gf0`.`users` SET `level` = '".$_POST['level']."' WHERE `users`.`id` = ".$id."; ";
+            $sql .= "UPDATE `users` SET `level` = '" . $_POST['level'] . "' WHERE `users`.`id` = " . $id . "; ";
             }
 
             //name check and set
             if($rowcheck['name'] === $_POST['usrname']) {
                 $sql .="";
             } else {
-                $sql .= "UPDATE `my_gf0`.`users` SET `name` = '".$_POST['usrname']."' WHERE `users`.`id` = ".$id."; ";
+            $sql .= "UPDATE `users` SET `name` = '" . $_POST['usrname'] . "' WHERE `users`.`id` = " . $id . "; ";
             }
 
             //surname check and set
             if($rowcheck['surname'] === $_POST['usrsurname']) {
                 $sql .= "";
             } else {
-                $sql .= "UPDATE `my_gf0`.`users` SET `surname` = '".$_POST['usrsurname']."' WHERE `users`.`id` = ".$id."; ";
+            $sql .= "UPDATE `users` SET `surname` = '" . $_POST['usrsurname'] . "' WHERE `users`.`id` = " . $id . "; ";
             }
 
             //username check and set
             if($rowcheck['username'] === $_POST['usrusername']) {
                 $sql .= "";
             } else {
-                $sql .= "UPDATE `my_gf0`.`users` SET `username` = '".$_POST['usrusername']."' WHERE `users`.`id` = ".$id."; ";
+            $sql .= "UPDATE `users` SET `username` = '" . $_POST['usrusername'] . "' WHERE `users`.`id` = " . $id . "; ";
             }
 
             //password mess
@@ -42,7 +42,7 @@
                 if ($rowcheck['psw'] == $password) {
                     $sql .= "";
                 } else {
-                    $sql .= "UPDATE `my_gf0`.`users` SET `psw` = '".$password."' WHERE `users`.`id` = ".$id."; ";
+                $sql .= "UPDATE `users` SET `psw` = '" . $password . "' WHERE `users`.`id` = " . $id . "; ";
                 }
             }
         }

@@ -133,7 +133,7 @@ function level($level, $array, $lang)
         -->
 <style>
     .nav-pills .nav-link {
-        color: #28a745         !important;
+        color: #28a745 !important;
         <?php
         if ($theme == "blue") {
             echo 'color: #007bff!important;';
@@ -144,8 +144,8 @@ function level($level, $array, $lang)
     }
 
     .nav-link.active {
-        color: #fff         !important;
-        background-color: #28a745         !important;
+        color: #fff !important;
+        background-color: #28a745 !important;
         <?php
         if ($theme == "blue") {
             echo 'color: #fff!important; background-color: #007bff!important;';
@@ -247,7 +247,7 @@ function level($level, $array, $lang)
                     </span>
                     <br>
                     <br>
-                    <span data-toggle="tooltip" data-placement="right" title="<?php echo $arraylang[$lang]['advuser']; ?> (In future updates)">
+                    <span data-toggle="tooltip" data-placement="right" title="<?php echo $arraylang[$lang]['advuser']; ?> (Proximamente ...)">
                         <a href="#modalAdvUsers" class="btn btn-link text-secondary text-decoration-none disabled" style="font-size: 100%; padding: 0.5rem;" type="button" data-toggle="modal"><i class="fas fa-users-cog"></i></a>
                     </span>
                 </div>
@@ -281,11 +281,11 @@ function level($level, $array, $lang)
                                                         <small class="text-muted">' . $arraylang[$lang]['username'] . '</small>
                                                         <h4 class="mb-2">@' . $rowdet->username . '</h4>
                                                     </div>
-                                                    <div class="p-4 align-self-center" style="width: 43%; padding-bottom: 0!important; padding-top: 0!important;">
+                                                    <div class="p-4 align-self-center" style="width: 50%; padding-bottom: 0!important; padding-top: 0!important;">
                                                         <small>' . $arraylang[$lang]['crole'] . '</small>
                                                         <h4 class="mb-3"><span class="badge badge-pill badge-' . theme($theme) . '">' . $arraylang[$lang]['user' . $rowdet->level] . '</span></h4>
                                                         <small>' . $arraylang[$lang]['registered'] . '</small>
-                                                        <h4 class="mb-3">' . $rowdet->registered . '</h4>
+                                                        <h4 class="mb-3">' . date("d-m-Y", strtotime($rowdet->registered)) . '</h4>
                                                     </div>
                                                 </div>
                                                 <hr>
