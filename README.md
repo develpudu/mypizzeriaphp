@@ -88,7 +88,7 @@ En ausencia de PhpMyAdmin, debe ingresar manualmente las consultas a través de 
 <br>
 
 ### ¿Cómo comparto un error que encontré?
-En la sección **[problemas] (https://github.com/develpudu/mypizzeriaphp/issues)** es posible insertar cualquier error para mejorar la experiencia futura del paquete MyPizzeriaPHP.
+En la sección **[problemas](https://github.com/develpudu/mypizzeriaphp/issues)** es posible insertar cualquier error para mejorar la experiencia futura del paquete MyPizzeriaPHP.
 
 <br>
 
@@ -97,4 +97,5 @@ En la sección **[problemas] (https://github.com/develpudu/mypizzeriaphp/issues)
 
 <br>
 <br>
-Basado en el fork de [PhpMyPizza](https://github.com/Phoenixx19/PhpMyPizza)
+
+Basado en el fork de *[PhpMyPizza](https://github.com/Phoenixx19/PhpMyPizza)*
