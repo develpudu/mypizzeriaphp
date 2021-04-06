@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- bootstrap 4 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -13,6 +13,7 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
         body {
             word-wrap: break-word;
             font-family: 'Nunito', sans-serif;
@@ -29,7 +30,7 @@
                 </div>
                 <div class="animated fadeInUp delay-1s">
                     <h2 class="lead" style="font-size: 2rem;">Error 404</h2>
-                    <h5 class="text-muted">Not found. Whoops!</h5>
+                    <h5 class="text-muted">No encontrado. Oops!</h5>
                 </div>
             </div>
         </div>
