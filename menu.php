@@ -140,9 +140,9 @@ $id = (!isset($_GET['id'])) ? $minid : $_GET['id'];
                             while ($row2 = $result2->fetch_assoc()) {
                                 echo '<div class="col">
                             <h1 class="d-flex justify-content-center">' . $row2['name'] . ' ($' . $row2['price'] . ')</h1>
-                            <h5 class="d-flex justify-content-center">' . $row2['descrizione'] . '</h5>
+                            <h5 class="d-flex justify-content-center">' . $row2['description'] . '</h5>
                             <br>
-                            <img src="' . $row2['photo_url'] . '" alt="" class="rounded img-fluid mx-auto d-block shadow" style="max-width:80%;border-style: solid;border-width: 2px;">
+                            <img src="/resources/menu/' . $row2['photo_url'] . '" alt="" class="rounded img-fluid mx-auto d-block shadow" style="max-width:80%;border-style: solid;border-width: 2px;">
                         </div>';
                             }
                         }

@@ -218,7 +218,7 @@ function level($level, $array, $lang)
                         while ($row = $result->fetch_assoc()) {
                             echo '<a href="?' . $row['id'] . '" class="list-group-item list-group-item-action border-right" style="padding: 0.5rem;">
                                         <div class="d-flex">
-                                            <div class="p-2 align-self-center"><img class="rounded-circle" src="' . $row['photo_url'] . '" width="75" height="75"></div>
+                                            <div class="p-2 align-self-center"><img class="rounded-circle" src="/resources/users/' . $row['photo_url'] . '" width="75" height="75"></div>
                                             <div class="p-2 align-self-center">';
                             if ($row['surname'] == NULL && $row['name'] == NULL) {
                                 echo '<h5 class="mb-1">@' . $row['username'] . '</h5>';
@@ -271,7 +271,7 @@ function level($level, $array, $lang)
                                                 <h3>' . $arraylang[$lang]['infoacc'] . '</h3>
                                                 <div class="d-flex p-4" style="padding-bottom: 0!important;">
                                                     <div class="p-4 align-self-center">
-                                                        <img class="rounded-circle" src="' . $rowdet->photo_url . '" width="175" height="175">
+                                                        <img class="rounded-circle" src="/resources/users/' . $rowdet->photo_url . '" width="175" height="175">
                                                     </div>
                                                     <div class="p-4 align-self-center" style="width: 40%; padding-bottom: 0!important; padding-top: 0!important;">
                                                         <small class="text-muted">' . $arraylang[$lang]['lastname'] . '</small>
