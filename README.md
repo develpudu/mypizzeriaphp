@@ -1,104 +1,105 @@
-# PhpMyPizza
-[![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Phoenixx19/PhpMyPizza?include_prereleases)](https://github.com/Phoenixx19/PhpMyPizza/releases)
-[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Phoenixx19/PhpMyPizza)](https://github.com/Phoenixx19/PhpMyPizza/releases)
-[![GitHub All Releases](https://img.shields.io/github/downloads/Phoenixx19/PhpMyPizza/total)](https://github.com/Phoenixx19/PhpMyPizza/releases)
+# MyPizzeriaPHP 🍕 <img src ="https://raw.githubusercontent.com/develpudu/mypizzeriaphp/master/resources/phpmypizza.ico" width="80px" alt="phpmypizza logo" align ="right">
  
-**PhpMyPizza** e' un gestore di ordini per ristoranti "più tecnologici".
-PhpMyPizza e' basato su *PHP* come linguaggio di programmazione e *SQL (MySQL)* per la gestione del intero ristorante. 
+**MyPizzeriaPHP** es un administrador de pedidos para restaurantes "más tecnológicos".
+MyPizzeriaPHP se basa en *PHP* como lenguaje de programación y *SQL (MySQL)* para la gestión de todo el restaurante.
 
-## Requisiti
-> I requisiti sono basati su test effettuati in precedenza su [XAMPP](https://www.apachefriends.org/index.html) versione 7.1.3.
-> Non e' garantito il funzionamento utilizzando versioni di **PHP<5.3**.
+## Requisitos
+> Los requisitos se basan en pruebas anteriores en [XAMPP] (https://www.apachefriends.org/index.html) versión **PHP > 7.1.3**.
+> No se garantiza el funcionamiento con versiones **PHP <5.3**
 
-Per *PhpMyPizza* e' necessario essere in possesso di un webserver o un server con:
-- Apache 2.4.39 **oppure** Nginx (non testato)
-- PHP 7.1.30
+Para *MyPizzeriaPHP* es necesario tener un servidor web con:
+- Apache 2.4.39 / Nginx
+- PHP 7.4.0
 - MySQL 5.6.33
-- Connessione ad Internet
-- PHPMyAdmin (consigliato)
+- Conexión a Internet
 
-Nel webserver, e' consigliato l'uso del root (cioe' la cartella /) per ottenere il corretto funzionamento del intero pacchetto.
-
-<br>
-
-## Installazione
-1. Per installare PHPMyPizza semplicemente scaricare dalle **[releases](https://github.com/Phoenixx19/PhpMyPizza/releases)** la versione più recente, dopo aver scaricato il file .zip sarà necessario aprire il file .zip e trascinare la cartella sul root del webserver.
-
-2. In seguito si dovrà spostare tutti gli elementi all'interno della cartella al dì fuori (e eliminare la cartella ormai inutile).
-
-3. Aprire il webserver nel caso non sia già stato fatto partire e collegatevi tramite qualsiasi browser. Sarà richiesto il completamento di due form dove verranno richiesti le credenziali del database.
-
-
-4. Al completamento verrà richiesto il login. 
-
-Dopo l'inserimento corretto del account, sarà possibile accedere a PhpMyPizza. :)
+En el servidor web, se recomienda utilizar la raíz (es decir, el directorio /) para que todo el paquete funcione correctamente.
 
 <br>
 
-## FAQ
-### Come creo o inserisco un ordine?
-Semplicemente premi su `Prendi Ordini` e inserisci i dati richiesti.
-Una volta inserito andare su `Cucina` per controllare il corretto funzionamento.
+## Instalación
+1. Para instalar MyPizzeriaPHP, simplemente descargue desde **[releases] (https://github.com/develpudu/mypizzeriaphp/releases)** la última versión. Después de descargar el archivo .zip, deberá abrir el archivo .zip y arrastre la carpeta a la raíz del servidor web.
+> O clonar el repositorio git clone https://github.com/develpudu/mypizzeriaphp.git
 
-Se il pop-up non appare prova a disabilitare il blocco di pop-up sul tuo dispositivo.
+2. A continuación, tendrá que mover todos los elementos dentro de la carpeta al exterior (y eliminar la carpeta ahora inútil).
 
-<br>
+3. Abra el servidor web si aún no se ha iniciado y conéctese a través de cualquier navegador. Se requerirán dos formularios para completar donde se solicitarán las credenciales de la base de datos.
 
-### Come pago il conto?
-Andare su `Conti` e premere sul tasto affianco al tavolo interessato. Si aprirà un pop-up all'interno della pagina (modal) dove sarà possibile controllare il conto di un tavolo, sono applicati coperto e tasse aggiuntive modificabili sulle impostazioni. Una volta confermato il pagamento, i record del tavolo completati vengono eliminati. 
+4. Al finalizar, se le pedirá que inicie sesión.
+> Los usuarios de prueba son:
+> | Tipo | Usuario | Password |
+> |: ---: |: --- |
+> | Administrador | admin | admin |
+> | Gerente de sala | user1 | password |
+> | Camarero / Cocinero | user2 | password |
 
-Nelle versioni future sarà possibile salvare i record per le statistiche.
 
-<br>
-
-### Dove modifico le impostazioni?
-Aprendo `Impostazioni` sarà possibile modificare le impostazioni. Nella barra a sinistra si trovano le possibili impostazioni modificabili e premendo una delle possibili si verrà indirizzati nella barra a destra. **E' importante cambiare le impostazioni solo se necessario, in caso di errori, riconfigurare** `config.ini`.
-
-Se si sta accedendo per la prima volta al sito, il file di configurazione non sarà disponibile poiche viene creato alla fine della configurazione iniziale.
+Después de ingresar su cuenta correctamente, podrá acceder a MyPizzeriaPHP. :)
 
 <br>
 
-### Come inserisco o elimino un account?
-Andando su `Utenti` si potranno gestire gli utenti nel sito, premendo **+** sulla barra a lato verrà richiesto un form per l'inserimento di un user, a seconda della categoria del proprio account si potranno utilizzare più o meno pagine nel sito.
+## PREGUNTAS MÁS FRECUENTES
+### ¿Cómo creo o realizo un pedido?
+Simplemente haga clic en `Pedidos` e ingrese los datos requeridos.
+Una vez insertado, vaya a `Cocina` para comprobar su correcto funcionamiento.
 
-|Level|Tipo|Pagine|
-|:---:|:---:|:---|
-|0|Admin|/|
-|1|Gestore sala|/, Impostazioni (solo lettura)|
-|2|Cameriere/Cuoco|Cucina, Prendi ordini, Conto|
-|-|Visitatore|Menu|
+Si la ventana emergente no aparece, intente deshabilitar el bloqueador de ventanas emergentes en su dispositivo.
+
+<br>
+
+### ¿Cómo pago la factura?
+Vaya a `Cuentas` y presione el botón junto a la tabla correspondiente. Se abrirá una ventana emergente dentro de la página (modal) donde será posible verificar la factura de una mesa, se aplican cargos de cobertura e impuestos adicionales que se pueden cambiar en la configuración. Una vez que se confirma el pago, se eliminan los registros de la tabla completados.
+
+En futuras versiones será posible guardar registros para estadísticas.
+
+<br>
+
+### ¿Dónde cambio la configuración?
+Al abrir `Configuración` podrá cambiar la configuración. En la barra de la izquierda encontrarás las posibles configuraciones modificables y presionando una de las posibles te dirigirá a la barra de la derecha. **Es importante cambiar la configuración solo si es necesario, en caso de errores, reconfigure** `config.ini`.
+
+Si accede al sitio por primera vez, el archivo de configuración no estará disponible, ya que se crea al final de la configuración inicial.
+
+<br>
+
+### ¿Cómo agrego o elimino una cuenta?
+Al ir a `Usuarios` podrá administrar usuarios en el sitio, presionando **+** en la barra lateral se le pedirá un formulario para ingresar un usuario, dependiendo de la categoría de su cuenta que pueda usar más o menos páginas en el sitio.
+
+
+| Nivel | Tipo | Páginas |
+|: ---: |: ---: |: --- |
+| 0 | Administrador | / |
+| 1 | Gerente de sala | /, Configuración (solo lectura) |
+| 2 | Camarero / Cocinero | Cocina, Recepción de pedidos, Factura |
+| - | Visitante | Menú |
 
 
 <br>
 
-### Come modifico il menu? *(avanzato)*
-Per modificare il menu occorre accedere a PhpMyAdmin, per fare ciò recatevi sulla homepage e aggiungiete  `/phpmyadmin/`. Eseguire il login e andare sul vostro database utilizzato per PhpMyPizza e selezionare la tabella `menu`.
-Una volta entrati nella tabella sarà possibile gestire il proprio menu.
+### ¿Cómo cambio el menú? *(avanzado)*
+Para editar el menú, debe iniciar sesión en PhpMyAdmin, para hacerlo, vaya a la página de inicio y agregue `/phpmyadmin/`. Inicie sesión y vaya a su base de datos utilizada para MyPizzeriaPHP y seleccione la tabla `menú`.
+Una vez que haya ingresado a la mesa, podrá administrar su menú.
 
-Se si vogliono cancellare i dati all'interno della tabella premere su **Operazioni** quindi **Svuota la tabella (TRUNCATE)**.
+Si desea eliminar los datos dentro de la tabla, presione **Operaciones** y luego **Vacíe la tabla (TRUNCATE)**.
 
->E' importante non cancellare definitivamente la tabella con il `DROP`, poiché molte funzionalità del sito potrebbero non funzionare. Per poter riaggiungere una tabella sarà richiesto utilizzare le query interessate all'interno del file `/php/first_access.inc.php`.
+> Es importante no eliminar permanentemente la tabla con el `DROP`, ya que muchas características del sitio pueden no funcionar. Para volver a agregar una tabla, se le pedirá que utilice las consultas correspondientes dentro del archivo `/resoureces/sampleDB.sql`.
 
-Nell'assenza di PhpMyAdmin, occorre inserire manualmente le query manualmente tramite CLI di MySQL oppure utilizzare un'altro DBMS.
+En ausencia de PhpMyAdmin, debe ingresar manualmente las consultas a través de la CLI de MySQL o usar otro DBMS.
 
-<br>
-
-### Come condivido un bug che ho trovato?
-Nella sezione **[issues](https://github.com/Phoenixx19/PhpMyPizza/issues)** è possibile inserire eventuali bug per migliorare l'esperienza futura del pacchetto PhpMyPizza. Il nostro pacchetto si basa sugli utilizzi di tutti, e con 
+> En futuras versiones será posible guardar administrar el menú desde el sistema.
 
 <br>
 
-## Copyright / Licenze
-A noi ci stanno a cuore le licenze. :)
+### ¿Cómo comparto un error que encontré?
+En la sección **[problemas] (https://github.com/develpudu/mypizzeriaphp/issues)** es posible insertar cualquier error para mejorar la experiencia futura del paquete MyPizzeriaPHP.
 
-PhpMyPizza utilizza '*[PHP (Hypertext Preprocessor)](https://php.net)*', '*[MySQL](https://www.mysql.com)*', '*[PhpMyAdmin](https://www.phpmyadmin.net)*' e '*[Mobile_Detect](https://github.com/serbanghita/Mobile-Detect)*'. 
-PhpMyPizza are not affiliated with any of the above. All brands and trademarks belong to their respective owners. PhpMyPizza is not a PHP or MySQL-approved software, nor is it associated with any of them.
+<br>
+
+## Copyright / Licencias
+[MIT](https://github.com/develpudu/mypizzeriaphp/blob/master/LICENSE.md)
 
 <br>
 <br>
 
-💕 with love,
+ [DevelPudu](https://github.com/develpudu). 
 
- [Andrea Seppi](https://github.com/Phoenixx19), [Giulio Furlan](https://github.com/GiuFu) con l'aiuto di [Matteo Diblas](https://github.com/alex3025). 
-
-PhpMyPizza Labs, 2019-2020
+Basado en el fork de [PhpMyPizza](https://github.com/Phoenixx19/PhpMyPizza)
