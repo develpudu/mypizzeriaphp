@@ -10,8 +10,14 @@ $dBUsername = $array['CONFIG']['user'];
 $dBPassword = $array['CONFIG']['password'];
 $dBName = $array['CONFIG']['dbname'];
 $conn = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
-                        echo '<link rel="icon" href="' . $array['CONFIG']['site'] . 'resources/phpmypizza.ico" type="image/x-icon">';
-                        echo '<title>' . $array['INFO']['name'] . '</title>';
+echo '<link rel="icon" href="' . $array['CONFIG']['site'] . '/resources/phpmypizza.ico" type="image/x-icon">';
+echo '<title>' . $array['INFO']['name'] . '</title>';
+
+                        /* cambiar el conjunto de caracteres a utf8 */
+                        if (!$conn->set_charset("utf8")) {
+                            printf("Error cargando el conjunto de caracteres utf8: %s\n", $conn->error);
+                            exit();
+                        }                         
 $lang = ($array['LANG']['language']);
 // if ($lang != "EN" && $lang != "IT") {
 //     $lang = "EN";
