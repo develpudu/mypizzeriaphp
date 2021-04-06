@@ -84,7 +84,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </table>
                                 </div>
                             <div class="modal-footer">
-                                <a type="button" class="btn btn-link text-secondary mr-auto" data-dismiss="modal">'.$arraylang[$lang]['close'].'</a>
+                                <a type="button" class="btn btn-link text-secondary mr-auto" data-dismiss="modal">' . $arraylang[$lang]['cancel'] . '</a>
+                                <a type="button" class="btn btn-link text-success mr-auto" data-dismiss="modal">' . $arraylang[$lang]['cashout'] . '&nbsp;&nbsp;<i class="fas fa-money-bill-alt"></i></a>
                                 <form method="post" action="/bill.php" id="delete_'.$row['table_number'].'">
                                     <input type="text" name="tn" value="'.$row['table_number'].'" hidden>
                                     <a type="button" class="btn btn-link text-danger" name="" onclick="document.getElementById(&quot;delete_'.$row['table_number'].'&quot;).submit();"><i class="fas fa-trash"></i></a>

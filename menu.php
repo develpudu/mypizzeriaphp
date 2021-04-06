@@ -75,7 +75,7 @@ $id = (!isset($_GET['id'])) ? $minid : $_GET['id'];
                                 <p class="margin-top: 1rem;"></p>
                                 <br>
                                 <?php
-                                $sql = 'SELECT id,name FROM menu WHERE tipo="' . $tipo . '" order by id, tipo ASC';
+                        $sql = 'SELECT id,name FROM menu WHERE tipo="' . $tipo . '" ORDER BY name, tipo ASC';
                                 $result = $conn->query($sql);
                                 if ($result->num_rows > 1) {
                                     while ($row = $result->fetch_assoc()) {

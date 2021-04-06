@@ -247,7 +247,7 @@ if (!file_exists($file)) {
     $detect = new Mobile_Detect();
 
     if (!isset($_COOKIE['logged-id']))
-        header('Location: ./login/');
+    header('Location: ./menu/');
     else {
         if ($detect->isMobile())
             header('Location: ../serve/');

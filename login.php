@@ -27,11 +27,11 @@ body {
                 <div id="main-div">
                     <form action="/php/login.inc.php" method="POST">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Username</label>
+                            <label for="exampleInputEmail1"><?php echo $arraylang[$lang]['username']; ?></label>
                             <input type="text" name="login-username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
+                            <label for="exampleInputPassword1"><?php echo $arraylang[$lang]['password']; ?></label>
                             <input type="password" name="login-password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                         </div>
                         <div class="form-group form-check" hidden>

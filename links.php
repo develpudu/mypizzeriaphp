@@ -462,7 +462,10 @@
             <?php
             if (isset($_COOKIE['logged-id'])) {
                 echo '<a class="btn btn-link text-danger text-decoration-none" href="../php/logout.inc.php" style="padding-left: 12; padding-right: 12;"><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;' . $arraylang[$lang]['logout'] . '</a>';
+            } else {
+                echo '<a class="btn btn-link text-success text-decoration-none" href="/login" style="padding-left: 12; padding-right: 12;"><i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;' . $arraylang[$lang]['login'] . '</a>';
             }
+
             ?>
         </div>
     </nav>
