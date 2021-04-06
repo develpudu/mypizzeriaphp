@@ -36,6 +36,8 @@ En el servidor web, se recomienda utilizar la raíz (es decir, el directorio /) 
 
 Después de ingresar su cuenta correctamente, podrá acceder a MyPizzeriaPHP. :)
 
+[DEMO](https://mypizzeriaphp.dedyn.oi)
+
 <br>
 
 ## PREGUNTAS MÁS FRECUENTES
