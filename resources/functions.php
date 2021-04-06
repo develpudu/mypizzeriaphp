@@ -40,13 +40,13 @@
         $diff->d -= $diff->w * 7;
     
         $string = array(
-            'y' => 'year',
-            'm' => 'month',
-            'w' => 'week',
-            'd' => 'day',
-            'h' => 'hour',
-            'i' => 'minute',
-            's' => 'second',
+        'y' => 'Año',
+        'm' => 'Mese',
+        'w' => 'Semana',
+        'd' => 'Dia',
+        'h' => 'Hora',
+        'i' => 'Minuto',
+        's' => 'Segundo',
         );
         foreach ($string as $k => &$v) {
             if ($diff->$k) {
@@ -57,7 +57,7 @@
         }
     
         if (!$full) $string = array_slice($string, 0, 1);
-        return $string ? implode(', ', $string) . ' ago' : 'just now';
+    return $string ? 'Hace ' . implode(', ', $string) : 'Justo ahora';
     }
 
     function write_php_ini($array, $file) {

@@ -1,5 +1,5 @@
 <!-- font awesome -->
-<?php $_SERVER['version'] = "1.0.2alpha"; ?>
+<?php $_SERVER['version'] = "0.1.2alpha"; ?>
 <script src="https://kit.fontawesome.com/d2ea588ed1.js" crossorigin="anonymous"></script>
 
 <!-- bootstrap 4 -->
@@ -9,7 +9,10 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <style>
-    button, [type="button"], [type="reset"], [type="submit"] {
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
         -webkit-appearance: none;
     }
 
@@ -20,7 +23,7 @@
     .default-grad {
         width: 75%;
         height: 0;
-        padding:37.5% 0;
+        padding: 37.5% 0;
         margin: 0.5rem;
         background: linear-gradient(to top right, #f8f9fa 20%, #28a745 80%);
     }
@@ -28,7 +31,7 @@
     .blue-grad {
         width: 75%;
         height: 0;
-        padding:37.5% 0;
+        padding: 37.5% 0;
         margin: 0.5rem;
         background: linear-gradient(to top right, #f8f9fa 20%, #007bff 80%);
     }
@@ -36,14 +39,14 @@
     .yellow-grad {
         width: 75%;
         height: 0;
-        padding:37.5% 0;
+        padding: 37.5% 0;
         margin: 0.5rem;
         background: linear-gradient(to top right, #f8f9fa 20%, #ffc107 80%);
     }
 </style>
 
 <script>
-    $(function () {
+    $(function() {
         $('[data-toggle="tooltip"]').tooltip()
     })
 </script>
@@ -54,11 +57,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
 <?php
-    //!-- file check --!//
+//!-- file check --!//
 
-    $file = "./config.ini";
-    if (!file_exists($file)) {
-        echo '
+$file = "./config.ini";
+if (!file_exists($file)) {
+    echo '
             <body class="h-100 bg-light text-center">
                 <div class="container h-100 animated fadeIn fast">
                     <div class="row h-100 justify-content-center align-items-center">
@@ -67,7 +70,7 @@
                                 <h1>Welcome to PhpMyPizza</h1>
                                 <!-- Form -->
                                 <form class="form-example" action="./php/first_access.inc.php" method="post">
-                                    <input type="text" name="site" value="http://'.$_SERVER['HTTP_HOST'].'" hidden>
+                                    <input type="text" name="site" value="http://' . $_SERVER['HTTP_HOST'] . '" hidden>
                                     <div class="tab-content"></div>
                                         <div class="tab-pane fade active show" id="get-started" role="tabpanel" aria-labelledby="get-started-tab">
                                             <p class="description lead"><b>Introduction</b></p>
@@ -223,16 +226,16 @@
                                     </ul>
                                 </form>
                             <!-- Form end -->
-                            <p class="mt-5 ml-3 text-muted" style="margin-bottom: 0.5rem;">Apache Version: '.$_SERVER['SERVER_SOFTWARE'].'&nbsp;
+                            <p class="mt-5 ml-3 text-muted" style="margin-bottom: 0.5rem;">Apache Version: ' . $_SERVER['SERVER_SOFTWARE'] . '&nbsp;
                                 <i class="text-success far fa-check-circle" data-toggle="tooltip" data-placement="right" title="It just works."></i>
                             </p>
-                            <p class="ml-3 text-muted" style="margin-bottom: 0.5rem;">PHP Version: '.phpversion().'&nbsp;&nbsp;';
-                            if (version_compare(PHP_VERSION, '7.0.0') >= 0) {
-                                echo '<i class="text-success far fa-check-circle" data-toggle="tooltip" data-placement="right" title="This version is supported."></i></p>';
-                            } else {
-                                echo '<i class="text-warning far fa-question-circle" data-toggle="tooltip" data-placement="right" title="This version could not work well. Update your PHP."></i></p>';
-                            }
-                            echo '<p class="text-muted">&copy; 2019-2020&nbsp;&minus;&nbsp;PhpMyPizza '.$_SERVER['version'].'</p>
+                            <p class="ml-3 text-muted" style="margin-bottom: 0.5rem;">PHP Version: ' . phpversion() . '&nbsp;&nbsp;';
+    if (version_compare(PHP_VERSION, '7.0.0') >= 0) {
+        echo '<i class="text-success far fa-check-circle" data-toggle="tooltip" data-placement="right" title="This version is supported."></i></p>';
+    } else {
+        echo '<i class="text-warning far fa-question-circle" data-toggle="tooltip" data-placement="right" title="This version could not work well. Update your PHP."></i></p>';
+    }
+    echo '<p class="text-muted">&copy; 2019-2020&nbsp;&minus;&nbsp;PhpMyPizza ' . $_SERVER['version'] . '</p>
                             <!-- End input fields -->
                         </div>
                     </div>
@@ -243,7 +246,7 @@
     include 'resources/Mobile_Detect.php';
     $detect = new Mobile_Detect();
 
-    if(!isset($_COOKIE['logged-id']))
+    if (!isset($_COOKIE['logged-id']))
         header('Location: ./login/');
     else {
         if ($detect->isMobile())

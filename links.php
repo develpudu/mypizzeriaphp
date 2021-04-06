@@ -325,13 +325,13 @@
                                         <h5 id="title-lang"><?php echo ($arraylang[$lang]['lang']); ?></h5>
                                         <p for="title-lang"><?php echo ($arraylang[$lang]['textlang']); ?></p>
                                         <div class="custom-control custom-radio">
+                                            <input class="custom-control-input" type="radio" name="lang" id="spanish" value="ES" <?php if ($lang == "ES") echo "checked"; ?>>
+                                            <label class="custom-control-label" for="spanish"><span class="flag-icon flag-icon-es"></span>&nbsp;Spanish (es-es)</label>
+                                            </input>
+                                        </div>                                        
+                                        <div class="custom-control custom-radio">
                                             <input class="custom-control-input" type="radio" name="lang" id="english" value="EN" <?php if ($lang == "EN") echo "checked"; ?>>
                                             <label class="custom-control-label" for="english"><span class="flag-icon flag-icon-gb"></span>&nbsp;English (en-gb)</label>
-                                            </input>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input class="custom-control-input" type="radio" name="lang" id="italian" value="IT" <?php if ($lang == "IT") echo "checked"; ?>>
-                                            <label class="custom-control-label" for="italian"><span class="flag-icon flag-icon-it"></span>&nbsp;Italian (it-it)</label>
                                             </input>
                                         </div>
                                         <br>
