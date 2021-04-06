@@ -353,8 +353,8 @@ function level($level, $array, $lang)
                                         </div>
                                         <div class="modal-footer">
                                             <form method="post" action="../php/delete_user.inc.php" class="mr-auto">
-                                                <input type="number" name="user" value="' . $rowdet->id . '" hidden>
-                                                <a type="submit" class="btn btn-link text-danger"><i class="fas fa-trash"></i>&nbsp;&nbsp;' . $arraylang[$lang]['delete'] . '</a>
+                                                <input type="number" name="id" value="' . $rowdet->id . '" hidden>
+                                                <button type="submit" class="btn btn-link text-danger"><i class="fas fa-trash"></i>&nbsp;&nbsp;' . $arraylang[$lang]['delete'] . '</button>
                                             </form>
 											<a class="btn btn-link text-success" style="cursor: pointer;" onclick="$(\'#updateuserform\').submit();">' . $arraylang[$lang]['update'] . '&nbsp;&nbsp;<i class="fas fa-redo-alt"></i></a>
                                         </div>

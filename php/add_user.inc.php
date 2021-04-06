@@ -20,10 +20,10 @@
 
     //random picture
     if ($usrcheck == true || $usrphoto == NULL) {
-        $usrphoto = "https://picsum.photos/".rand(175, 400);
+    $usrphoto = "default-user-image.png";
     }
 
-    $sql = "INSERT INTO `my_gf0`.`users` (`id`, `name`, `surname`, `username`, `psw`, `photo_url`, `level`, `registered`)
+$sql = "INSERT INTO `users` (`id`, `name`, `surname`, `username`, `psw`, `photo_url`, `level`, `registered`)
             VALUES (NULL, '".$usrname."', '".$usrsurname."', '".$usrusername."', '".$usrpassword."', '".$usrphoto."', '".$usrlvl."', CURRENT_TIMESTAMP);";
     $result = $conn->query($sql);
 
