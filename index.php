@@ -67,17 +67,17 @@ if (!file_exists($file)) {
                     <div class="row h-100 justify-content-center align-items-center">
                         <div class="col-10 col-md-8 col-lg-6">
                             <img class="mb-4 animated fadeIn delay-1s" src="http://gf0.altervista.org/resources/phpmypizza.ico" alt="" width="72" height="72">
-                                <h1>Welcome to PhpMyPizza</h1>
+                                <h1>Welcome to MyPizzeriaPHP</h1>
                                 <!-- Form -->
-                                <form class="form-example" action="./php/first_access.inc.php" method="post">
+                                <form class="form-setup" action="./php/first_access.inc.php" method="post">
                                     <input type="text" name="site" value="http://' . $_SERVER['HTTP_HOST'] . '" hidden>
-                                    <div class="tab-content"></div>
+                                    <div class="tab-content">
                                         <div class="tab-pane fade active show" id="get-started" role="tabpanel" aria-labelledby="get-started-tab">
                                             <p class="description lead"><b>Introduction</b></p>
                                             <div class="row justify-content-center">
-                                                <p class="text-justify" style="border-bottom: 1.75rem!important;">Hello, you are launching PhpMyPizza for the first time!
-                                                    <br><br>In order to complete the installation, you need to set a database and fill the following forms in order to make PhpMyPizza to work.
-                                                    <br><br>Thank you for using our software, feel free to provide feedbacks and report bugs on our <a href="https://www.github.com">Github</a>, if you feel like it! :)
+                                                <p class="text-justify" style="border-bottom: 1.75rem!important;">Hello, you are launching MyPizzeriaPHP for the first time!
+                                                    <br><br>In order to complete the installation, you need to set a database and fill the following forms in order to make MyPizzeriaPHP to work.
+                                                    <br><br>Thank you for using our software, feel free to provide feedbacks and report bugs on our <a href="https://github.com/develpudu/mypizzeriaphp/issues">Github</a>, if you feel like it! :)
                                                 </p>
                                             </div>
                                             <br>
@@ -88,11 +88,11 @@ if (!file_exists($file)) {
                                             <div class="row justify-content-center">
                                                 <div class="col-sm-9" style="padding: 1rem;"><!-- Input fields -->
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control" id="hostname" placeholder="IP / Hostname" name="hostname">
+                                                        <input type="text" class="form-control" id="hostname" placeholder="IP / Hostname" name="hostname" required>
                                                     </div>
                                                     <div class="form-row align-items-center" style="margin-bottom: 1rem;">
                                                         <div class="col-sm">
-                                                            <input type="text" placeholder="MySQL Username" name="user" class="form-control">
+                                                            <input type="text" placeholder="MySQL Username" name="user" class="form-control" required>
                                                         </div>
                                                         <div class="col-sm">
                                                             <input type="password" placeholder="MySQL Password" name="password" class="form-control">
@@ -156,7 +156,7 @@ if (!file_exists($file)) {
                                             <div class="col-sm-9" style="padding: 1rem;">
                                                 <!-- Input fields -->
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" id="name" placeholder="Restaurant\'s name" value="PhpMyPizza\'s Restaurant" name="name">
+                                                    <input type="text" class="form-control" id="name" placeholder="Restaurant\'s name" value="MyPizzeriaPHP\'s Restaurant" name="name">
                                                 </div>
                                                 <div style="padding: 0.5rem;">
                                                     <h6>Select the color scheme:</h6>
@@ -192,8 +192,8 @@ if (!file_exists($file)) {
                                                         </input>
                                                     </div>
                                                     <div class="col-sm-6 custom-control custom-radio">
-                                                        <input class="custom-control-input" type="radio" name="lang" id="italian" value="IT">
-                                                            <label class="custom-control-label" for="italian"><span class="flag-icon flag-icon-it"></span>&nbsp;Italian (it-it)</label>
+                                                        <input class="custom-control-input" type="radio" name="lang" id="spanish" value="ES">
+                                                            <label class="custom-control-label" for="spanish"><span class="flag-icon flag-icon-es"></span>&nbsp;Spanish (es-es)</label>
                                                         </input>
                                                     </div>
                                                 </div>
@@ -235,7 +235,7 @@ if (!file_exists($file)) {
     } else {
         echo '<i class="text-warning far fa-question-circle" data-toggle="tooltip" data-placement="right" title="This version could not work well. Update your PHP."></i></p>';
     }
-    echo '<p class="text-muted">&copy; 2019-2020&nbsp;&minus;&nbsp;PhpMyPizza ' . $_SERVER['version'] . '</p>
+    echo '<p class="text-muted">&copy; 2020-' . date('Y') . '&nbsp;&minus;&nbsp;MyPizzeriaPHP ' . $_SERVER['version'] . '</p>
                             <!-- End input fields -->
                         </div>
                     </div>

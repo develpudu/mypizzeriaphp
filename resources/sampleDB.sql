@@ -11,7 +11,25 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- Volcando estructura para tabla pizza.c_orders
+
+-- Volcando estructura de base de datos para mypizzeriaphp
+CREATE DATABASE IF NOT EXISTS `mypizzeriaphp` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `mypizzeriaphp`;
+
+-- Volcando estructura para tabla mypizzeriaphp.cash
+CREATE TABLE IF NOT EXISTS `cash` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `refid_user` int(11) DEFAULT NULL,
+  `amount` double DEFAULT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- Volcando datos para la tabla mypizzeriaphp.cash: 0 rows
+/*!40000 ALTER TABLE `cash` DISABLE KEYS */;
+/*!40000 ALTER TABLE `cash` ENABLE KEYS */;
+
+-- Volcando estructura para tabla mypizzeriaphp.c_orders
 CREATE TABLE IF NOT EXISTS `c_orders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `refid_user` int(11) DEFAULT NULL,
@@ -23,24 +41,24 @@ CREATE TABLE IF NOT EXISTS `c_orders` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla pizza.c_orders: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla mypizzeriaphp.c_orders: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `c_orders` DISABLE KEYS */;
 /*!40000 ALTER TABLE `c_orders` ENABLE KEYS */;
 
--- Volcando estructura para tabla pizza.menu
+-- Volcando estructura para tabla mypizzeriaphp.menu
 CREATE TABLE IF NOT EXISTS `menu` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` tinytext NOT NULL DEFAULT '0',
+  `name` tinytext CHARACTER SET utf8 NOT NULL DEFAULT '0',
   `price` double NOT NULL DEFAULT 0,
-  `photo_url` tinytext DEFAULT NULL,
-  `description` tinytext DEFAULT NULL,
+  `photo_url` tinytext CHARACTER SET utf8 DEFAULT NULL,
+  `description` tinytext CHARACTER SET utf8 DEFAULT NULL,
   `tipo` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `FK__m_tipo` (`tipo`),
   CONSTRAINT `FK__m_tipo` FOREIGN KEY (`tipo`) REFERENCES `m_tipo` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Volcando datos para la tabla pizza.menu: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla mypizzeriaphp.menu: ~16 rows (aproximadamente)
 /*!40000 ALTER TABLE `menu` DISABLE KEYS */;
 INSERT INTO `menu` (`id`, `name`, `price`, `photo_url`, `description`, `tipo`) VALUES
 	(1, 'Margarita', 800, 'margherita-50kalo.jpg', 'Pizza margarita, la original.', 3),
@@ -61,14 +79,14 @@ INSERT INTO `menu` (`id`, `name`, `price`, `photo_url`, `description`, `tipo`) V
 	(16, 'Docena', 1000, 'empanadas-docena.jpg', 'A tu elección, fritas o al horno.', 2);
 /*!40000 ALTER TABLE `menu` ENABLE KEYS */;
 
--- Volcando estructura para tabla pizza.m_tipo
+-- Volcando estructura para tabla mypizzeriaphp.m_tipo
 CREATE TABLE IF NOT EXISTS `m_tipo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `tipo` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla pizza.m_tipo: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla mypizzeriaphp.m_tipo: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `m_tipo` DISABLE KEYS */;
 INSERT INTO `m_tipo` (`id`, `tipo`) VALUES
 	(1, 'Bebidas'),
@@ -76,7 +94,7 @@ INSERT INTO `m_tipo` (`id`, `tipo`) VALUES
 	(3, 'Pizza');
 /*!40000 ALTER TABLE `m_tipo` ENABLE KEYS */;
 
--- Volcando estructura para tabla pizza.orders
+-- Volcando estructura para tabla mypizzeriaphp.orders
 CREATE TABLE IF NOT EXISTS `orders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `refid_user` int(11) DEFAULT NULL,
@@ -88,11 +106,11 @@ CREATE TABLE IF NOT EXISTS `orders` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla pizza.orders: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla mypizzeriaphp.orders: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 
--- Volcando estructura para tabla pizza.users
+-- Volcando estructura para tabla mypizzeriaphp.users
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` tinytext CHARACTER SET latin1 NOT NULL,
@@ -105,12 +123,12 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla pizza.users: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla mypizzeriaphp.users: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `name`, `surname`, `username`, `psw`, `photo_url`, `level`, `registered`) VALUES
 	(1, 'Admin', 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'default-user-image.png', 0, '2021-04-05 05:14:31'),
-	(2, 'Manager', 'Room', 'user1', '5f4dcc3b5aa765d61d8327deb882cf99', 'default-user-image.png', 1, '2021-04-05 05:14:31'),
-	(3, 'Waiter', 'Kitchen', 'user2', '5f4dcc3b5aa765d61d8327deb882cf99', 'default-user-image.png', 2, '2021-04-05 05:14:31');
+	(2, 'Sr', 'Gerente', 'user1', '5f4dcc3b5aa765d61d8327deb882cf99', 'default-user-image.png', 1, '2021-04-05 05:14:31'),
+	(3, 'Moza', 'Cocina', 'user2', '5f4dcc3b5aa765d61d8327deb882cf99', 'default-user-image.png', 2, '2021-04-05 05:14:31');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
