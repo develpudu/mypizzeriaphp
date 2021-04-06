@@ -1,5 +1,5 @@
-<head>
     <?php
+    header('Content-type: text/html; charset=utf-8');
     $ini = file_get_contents("./config.ini", true);
     $array = parse_ini_string($ini, true);
     //var_dump($array);
@@ -12,6 +12,11 @@
 
     $conn = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
 
+    /* cambiar el conjunto de caracteres a utf8 */
+    if (!$conn->set_charset("utf8")) {
+        printf("Error cargando el conjunto de caracteres utf8: %s\n", $conn->error);
+        exit();
+    }    
             echo '<link rel="icon" href="' . $array['CONFIG']['site'] . '/resources/phpmypizza.ico" type="image/x-icon">';
             echo '<title>' . $array['INFO']['name'] . '</title>';
 
@@ -41,8 +46,7 @@
         $level = 5;
     }
     ?>
-
-    <meta charset="utf-8">
+    <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

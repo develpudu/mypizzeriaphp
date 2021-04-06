@@ -1,4 +1,5 @@
 <?php
+session_start();
 $ini = file_get_contents("../config.ini", true);
 $array = parse_ini_string($ini, true);
 
@@ -7,7 +8,7 @@ $dBUsername = $array['CONFIG']['user'];
 $dBPassword = $array['CONFIG']['password'];
 $dBName = $array['CONFIG']['dbname'];
 
-$refid_user = 0;
+$refid_user = $_SESSION['logged-id'];
 $name = $_POST['name'];
 $quantity = $_POST['quantity'];
 $table_number = $_POST['table_number'];

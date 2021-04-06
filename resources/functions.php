@@ -6,16 +6,16 @@
 				return '&pound;' . number_format($amount, 2);
 			} else {
 				if ($amount<0) return "-".asDollars(-$amount);
-				return '&euro;' . number_format($amount, 2);
+            return '&dollar;' . number_format($amount, 2);
 			}
 		} else {
 			if ($lang == "EN") {
 				setlocale(LC_MONETARY, 'en_GB');
 				return utf8_encode(money_format('%n',$amount));
-			} elseif ($lang == "IT") {
-				setlocale(LC_MONETARY, 'it_IT.UTF-8');
-				$amount = money_format('%.2n', $amount);
-				return str_replace('Eu','&euro;',$amount);
+        } elseif ($lang == "ES") {
+            setlocale(LC_MONETARY, 'es_ES.UTF-8');
+			$amount = money_format('%.2n', $amount);
+            return str_replace('Eu','&euro;',$amount);
 			}
 		}
     }

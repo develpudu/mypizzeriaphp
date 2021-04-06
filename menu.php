@@ -1,5 +1,4 @@
 <?php
-header('Content-type: text/html; charset=utf-8');
 require('./links.php');
 //$id = substr($_SERVER['REQUEST_URI'],7);
 

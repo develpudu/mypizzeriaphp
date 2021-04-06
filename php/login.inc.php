@@ -1,5 +1,6 @@
 
 <?php
+session_start();
     require('connect.inc.php');
     if(!isset($_POST['submit-login']))
         header('Location: ../errors/404.php');
@@ -16,13 +17,11 @@
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        //output data of each row
-        while($row = $result->fetch_assoc()) {
-            //echo $row['id'].'      '.$row['username'].'      '.$row['psw'].'<br>';
-            setcookie('logged-id',$row['id'],time()+(86400 * 30), "/");
-            //echo $_COOKIE['logged-id'];
-            //header("location: ../login.php?".$row['id']);
-            header('Location: ../');
+    //output data of each row
+    while ($row = $result->fetch_assoc()) {
+        setcookie('logged-id',$row['id'],time()+(86400 * 30), "/");
+        $_SESSION['logged-id'] = $row['id'];
+        header('Location: ../');
         }
     } 
     else {

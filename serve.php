@@ -71,17 +71,17 @@ $theme = theme($array['LOOKNFEEL']['theme']);
                             </div>
                             <div class="form-group">
                                 <label for="quantityin"><b><?php echo ($arraylang[$lang]['quantity']); ?>:</b><br>
-                                    <input class="form-control form-control-lg" type="number" name="quantity" max="30" min="1" id="quantityin" placeholder="1" style="width: 15rem;" required>
+                                    <input class="form-control form-control-lg" type="number" name="quantity" max="30" min="1" id="quantityin" placeholder="Ej.: 1" style="width: 15rem;" required>
                                 </label>
                             </div>
                             <div class="form-group">
                                 <label for="table_numberin"><b><?php echo ($arraylang[$lang]['table']); ?>:</b><br>
-                                    <input class="form-control form-control-lg" type="number" name="table_number" max="40" min="1" id="table_numberin" placeholder="1" style="width: 15rem;" required>
+                                    <input class="form-control form-control-lg" type="number" name="table_number" max="40" min="1" id="table_numberin" placeholder="Ej.: 1" style="width: 15rem;" required>
                                 </label>
                             </div>
                             <div class="form-group">
                                 <label for="editsin"><b><?php echo ($arraylang[$lang]['edits']); ?>:</b><br>
-                                    <textarea class="form-control" aria-label="With textarea" name="edits" id="editsin" style="width: 15rem;" placeholder="Senza olio di palma..."></textarea>
+                                    <textarea class="form-control" aria-label="With textarea" name="edits" id="editsin" style="width: 15rem;" placeholder="Ej.: Sin aceite de oliva ..."></textarea>
                                 </label>
                             </div>
                             <button type="submit" class="btn btn-<?php echo $theme ?>" style="width: 15rem;"><i class="fas fa-plus"></i>&nbsp;<b><?php echo ($arraylang[$lang]['add']); ?></b></button>
