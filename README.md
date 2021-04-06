@@ -4,7 +4,7 @@
 MyPizzeriaPHP se basa en *PHP* como lenguaje de programación y *SQL (MySQL)* para la gestión de todo el restaurante.
 
 ## Requisitos
-> Los requisitos se basan en pruebas anteriores en [XAMPP] (https://www.apachefriends.org/index.html) versión **PHP > 7.1.3**.
+> Los requisitos se basan en pruebas anteriores en [XAMPP](https://www.apachefriends.org/index.html) versión **PHP > 7.1.3**.
 > No se garantiza el funcionamiento con versiones **PHP <5.3**
 
 Para *MyPizzeriaPHP* es necesario tener un servidor web con:
@@ -18,7 +18,7 @@ En el servidor web, se recomienda utilizar la raíz (es decir, el directorio /) 
 <br>
 
 ## Instalación
-1. Para instalar MyPizzeriaPHP, simplemente descargue desde **[releases] (https://github.com/develpudu/mypizzeriaphp/releases)** la última versión. Después de descargar el archivo .zip, deberá abrir el archivo .zip y arrastre la carpeta a la raíz del servidor web.
+1. Para instalar MyPizzeriaPHP, simplemente descargue desde **[releases](https://github.com/develpudu/mypizzeriaphp/releases)** la última versión. Después de descargar el archivo .zip, deberá abrir el archivo .zip y arrastre la carpeta a la raíz del servidor web.
 > O clonar el repositorio git clone https://github.com/develpudu/mypizzeriaphp.git
 
 2. A continuación, tendrá que mover todos los elementos dentro de la carpeta al exterior (y eliminar la carpeta ahora inútil).
@@ -27,11 +27,11 @@ En el servidor web, se recomienda utilizar la raíz (es decir, el directorio /) 
 
 4. Al finalizar, se le pedirá que inicie sesión.
 > Los usuarios de prueba son:
-> | Tipo | Usuario | Password |
-> |: ---: |: --- |
-> | Administrador | admin | admin |
-> | Gerente de sala | user1 | password |
-> | Camarero / Cocinero | user2 | password |
+> |        Tipo        | Usuario | Contraseña |
+> |:------------------:|---------|------------|
+> |    Administrador   | admin   | admin      |
+> |   Gerente de Sala  | user1   | password   |
+> | Camarero / Cociner | user2   | password   |
 
 
 Después de ingresar su cuenta correctamente, podrá acceder a MyPizzeriaPHP. :)
@@ -64,14 +64,12 @@ Si accede al sitio por primera vez, el archivo de configuración no estará disp
 ### ¿Cómo agrego o elimino una cuenta?
 Al ir a `Usuarios` podrá administrar usuarios en el sitio, presionando **+** en la barra lateral se le pedirá un formulario para ingresar un usuario, dependiendo de la categoría de su cuenta que pueda usar más o menos páginas en el sitio.
 
-
-| Nivel | Tipo | Páginas |
-|: ---: |: ---: |: --- |
-| 0 | Administrador | / |
-| 1 | Gerente de sala | /, Configuración (solo lectura) |
-| 2 | Camarero / Cocinero | Cocina, Recepción de pedidos, Factura |
-| - | Visitante | Menú |
-
+| Nivel | Tipo              | Páginas                               |
+|-------|-------------------|---------------------------------------|
+| 0     | Administrador     | /                                     |
+| 1     | Gerente de sala   | /, Configuración (solo lectura)       |
+| 2     | Camarero/Cocinero | Cocina, Recepción de pedidos, Factura |
+| -     | Visitante         | Menú                                  |
 
 <br>
 
@@ -95,11 +93,8 @@ En la sección **[problemas] (https://github.com/develpudu/mypizzeriaphp/issues)
 <br>
 
 ## Copyright / Licencias
-[MIT](https://github.com/develpudu/mypizzeriaphp/blob/master/LICENSE.md)
+[DevelPudu](https://github.com/develpudu). [MIT](https://github.com/develpudu/mypizzeriaphp/blob/master/LICENSE.md)
 
 <br>
 <br>
-
- [DevelPudu](https://github.com/develpudu). 
-
 Basado en el fork de [PhpMyPizza](https://github.com/Phoenixx19/PhpMyPizza)
