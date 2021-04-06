@@ -76,6 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <tr class="table-secondary font-weight-bold">
                                         <th colspan="3">&nbsp;&nbsp;'.$arraylang[$lang]['total'].':</th>';
                                         $amount = $amount + $tax + $array['INFO']['cover'];
+                $amount_tocash = $amount;
                                         echo '<td class="text-center">'.useCurrency($array['LANG']['language'], $amount).'</td>
                                     </tr>';
                                 }
@@ -83,12 +84,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 echo '</tbody>
                                 </table>
                                 </div>
-                            <div class="modal-footer">
-                                <a type="button" class="btn btn-link text-secondary mr-auto" data-dismiss="modal">' . $arraylang[$lang]['cancel'] . '</a>
-                                <a type="button" class="btn btn-link text-success mr-auto" data-dismiss="modal">' . $arraylang[$lang]['cashout'] . '&nbsp;&nbsp;<i class="fas fa-money-bill-alt"></i></a>
-                                <form method="post" action="/bill.php" id="delete_'.$row['table_number'].'">
-                                    <input type="text" name="tn" value="'.$row['table_number'].'" hidden>
-                                    <a type="button" class="btn btn-link text-danger" name="" onclick="document.getElementById(&quot;delete_'.$row['table_number'].'&quot;).submit();"><i class="fas fa-trash"></i></a>
+                            <div class="modal-footer justify-content-between">
+                                <a type="button" class="btn btn-link text-secondary" data-dismiss="modal">' . $arraylang[$lang]['cancel'] . '</a>
+                                <form method="post" action="../php/cashout.inc.php" id="cashout_' . $row['table_number'] . '">
+                                    <input type="text" name="tn" value="' . $row['table_number'] . '" hidden>
+                                    <input type="text" name="amount" value="' . $amount_tocash . '" hidden>
+                                    <a type="button" class="btn btn-link text-success" onclick="document.getElementById(&quot;cashout_' . $row['table_number'] . '&quot;).submit();">' . $arraylang[$lang]['cashout'] . '&nbsp;&nbsp;<i class="fas fa-money-bill-alt"></i></a>
+                                </form>
+                                <form method="post" action="/bill.php" id="delete_' . $row['table_number'] . '">
+                                    <input type="text" name="tn" value="' . $row['table_number'] . '" hidden>
+                                    <a type="button" class="btn btn-link text-danger" name="" onclick="document.getElementById(&quot;delete_' . $row['table_number'] . '&quot;).submit();">' . $arraylang[$lang]['delete'] . '&nbsp;&nbsp;<i class="fas fa-trash"></i></a>
                                 </form>
                             </div>
                         </div>
