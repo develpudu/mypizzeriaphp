@@ -12,10 +12,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 
--- Volcando estructura de base de datos para mypizzeriaphp
-CREATE DATABASE IF NOT EXISTS `mypizzeriaphp` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `mypizzeriaphp`;
-
 -- Volcando estructura para tabla mypizzeriaphp.cash
 CREATE TABLE IF NOT EXISTS `cash` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -55,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `tipo` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `FK__m_tipo` (`tipo`),
-  CONSTRAINT `FK__m_tipo` FOREIGN KEY (`tipo`) REFERENCES `m_tipo` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `FK__m_tipo` FOREIGN KEY (`tipo`) REFERENCES `m_tipo` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Volcando datos para la tabla mypizzeriaphp.menu: ~16 rows (aproximadamente)
@@ -130,6 +126,17 @@ INSERT INTO `users` (`id`, `name`, `surname`, `username`, `psw`, `photo_url`, `l
 	(2, 'Sr', 'Gerente', 'user1', '5f4dcc3b5aa765d61d8327deb882cf99', 'default-user-image.png', 1, '2021-04-05 05:14:31'),
 	(3, 'Moza', 'Cocina', 'user2', '5f4dcc3b5aa765d61d8327deb882cf99', 'default-user-image.png', 2, '2021-04-05 05:14:31');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+
+-- Volcando estructura para evento mypizzeriaphp.delete_event
+DELIMITER //
+CREATE DEFINER=CURRENT_USER EVENT `delete_event` ON SCHEDULE EVERY 15 MINUTE STARTS CURRENT_TIMESTAMP() ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
+                DELETE FROM orders WHERE timestamp < DATE_SUB(NOW(), INTERVAL 90 MINUTE);
+            END//
+DELIMITER ;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;

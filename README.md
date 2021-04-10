@@ -1,4 +1,4 @@
-# MyPizzeriaPHP 🍕 <img src ="https://raw.githubusercontent.com/develpudu/mypizzeriaphp/master/resources/phpmypizza.ico" width="80px" alt="phpmypizza logo" align ="right">
+# MyPizzeriaPHP 🍕 <img src ="https://https://mypizzeriaphp.dedyn.oi/resources/phpmypizza.ico" width="80px" alt="mypizzeriaphp logo" align ="right">
  
 **MyPizzeriaPHP** es un administrador de pedidos para restaurantes "más tecnológicos".
 MyPizzeriaPHP se basa en *PHP* como lenguaje de programación y *SQL (MySQL)* para la gestión de todo el restaurante.
@@ -8,8 +8,8 @@ MyPizzeriaPHP se basa en *PHP* como lenguaje de programación y *SQL (MySQL)* pa
 > No se garantiza el funcionamiento con versiones **PHP <5.3**
 
 Para *MyPizzeriaPHP* es necesario tener un servidor web con:
-- Apache 2.4.39 / Nginx
-- PHP 7.4.0
+- Apache 2.2
+- PHP 7.3.0
 - MySQL 5.6.33
 - Conexión a Internet
 
@@ -36,7 +36,7 @@ En el servidor web, se recomienda utilizar la raíz (es decir, el directorio /) 
 
 Después de ingresar su cuenta correctamente, podrá acceder a MyPizzeriaPHP. :)
 
-[DEMO](https://mypizzeriaphp.dedyn.oi)
+[DEMO Online](https://mypizzeriaphp.dedyn.oi)
 
 <br>
 

@@ -66,7 +66,7 @@ if (!file_exists($file)) {
                 <div class="container h-100 animated fadeIn fast">
                     <div class="row h-100 justify-content-center align-items-center">
                         <div class="col-10 col-md-8 col-lg-6">
-                            <img class="mb-4 animated fadeIn delay-1s" src="http://gf0.altervista.org/resources/phpmypizza.ico" alt="" width="72" height="72">
+                            <img class="mb-4 animated fadeIn delay-1s" src="resources/phpmypizza.ico" alt="" width="72" height="72">
                                 <h1>Welcome to MyPizzeriaPHP</h1>
                                 <!-- Form -->
                                 <form class="form-setup" action="./php/first_access.inc.php" method="post">
@@ -226,7 +226,7 @@ if (!file_exists($file)) {
                                     </ul>
                                 </form>
                             <!-- Form end -->
-                            <p class="mt-5 ml-3 text-muted" style="margin-bottom: 0.5rem;">Apache Version: ' . $_SERVER['SERVER_SOFTWARE'] . '&nbsp;
+                            <p class="mt-5 ml-3 text-muted" style="margin-bottom: 0.5rem;">Web Server Version: ' . $_SERVER['SERVER_SOFTWARE'] . '&nbsp;
                                 <i class="text-success far fa-check-circle" data-toggle="tooltip" data-placement="right" title="It just works."></i>
                             </p>
                             <p class="ml-3 text-muted" style="margin-bottom: 0.5rem;">PHP Version: ' . phpversion() . '&nbsp;&nbsp;';
