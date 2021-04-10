@@ -1,4 +1,4 @@
-# MyPizzeriaPHP 🍕 <img src ="https://https://mypizzeriaphp.dedyn.oi/resources/phpmypizza.ico" width="80px" alt="mypizzeriaphp logo" align ="right">
+# MyPizzeriaPHP 🍕 <img src ="http://mypizzeriaphp.dedyn.oi/resources/phpmypizza.ico" width="80px" alt="mypizzeriaphp logo" align ="right">
  
 **MyPizzeriaPHP** es un administrador de pedidos para restaurantes "más tecnológicos".
 MyPizzeriaPHP se basa en *PHP* como lenguaje de programación y *SQL (MySQL)* para la gestión de todo el restaurante.
